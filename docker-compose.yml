@@ -1,0 +1,34 @@
+version: '2'
+services:
+  nginx:
+    build: ./images/nginx
+    ports:
+      - 8080:80
+    links:
+      - php
+    volumes:
+      - ./project/public:/var/www/public
+  php:
+    working_dir: /var/www
+    build: ./images/php
+    links:
+      - mysql
+    volumes:
+      - ./project:/var/www
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_DATABASE: laravel
+      DB_USERNAME: laraveluser
+      DB_PASSWORD: p4ssw0rd
+  mysql:
+    image: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - ./data/db/mysql:/var/lib/mysql:cached
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laraveluser
+      MYSQL_PASSWORD: p4ssw0rd
+      MYSQL_ROOT_PASSWORD: p4ssw0rd2
