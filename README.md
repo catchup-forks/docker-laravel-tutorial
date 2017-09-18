@@ -1,14 +1,14 @@
 # Docker
 
-Solomon Hykes lightning talk
+Solomon Hykes lightning talk  
 https://www.youtube.com/watch?v=wW9CAH9nSLs
 
 
 ## Installation
 
-Mac: https://docs.docker.com/docker-for-mac/install/
-Win: https://docs.docker.com/docker-for-windows/install/
-Lin: https://docs.docker.com/engine/installation/#desktop
+* [Installation Mac](https://docs.docker.com/docker-for-mac/install/)  
+* [Installation Windows](https://docs.docker.com/docker-for-windows/install/)  
+* [Installation Linux](https://docs.docker.com/engine/installation/#desktop)  
 
 
 ## Docker cli
